@@ -1,1 +1,2 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_rag_catalog_embedding_user,rag.catalog.embedding.user,model_rag_catalog_embedding,base.group_user,1,1,1,1

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="rag_catalog_embedding_list_view" model="ir.ui.view">
+        <field name="name">rag.catalog.embedding.list</field>
+        <field name="model">rag.catalog.embedding</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="product_template_id"/>
+                <field name="embedding_model"/>
+                <field name="embedding_dimensions"/>
+                <field name="embedding_preview"/>
+                <field name="write_date"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="rag_catalog_embedding_form_view" model="ir.ui.view">
+        <field name="name">rag.catalog.embedding.form</field>
+        <field name="model">rag.catalog.embedding</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="product_template_id"/>
+                        <field name="embedding_model"/>
+                        <field name="embedding_dimensions"/>
+                        <field name="checksum"/>
+                        <field name="embedding_preview"/>
+                    </group>
+                    <field name="content_text"/>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="rag_catalog_embedding_action" model="ir.actions.act_window">
+        <field name="name">Catalog Embeddings</field>
+        <field name="res_model">rag.catalog.embedding</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <!-- Debug/technical data, only visible in developer mode -->
+    <menuitem id="menu_rag_catalog_embedding"
+        name="RAG Catalog Embeddings"
+        parent="base.menu_custom"
+        action="rag_catalog_embedding_action"
+        groups="base.group_no_one"
+        sequence="60"/>
+</odoo>

@@ -14,6 +14,7 @@ PostgreSQL database.
     "data": [
         "security/ir.model.access.csv",
         "views/product_template_views.xml",
+        "views/rag_catalog_embedding_views.xml",
     ],
     "installable": True,
     "application": False,
